@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="hotelManage" extends="struts-default" >
+        <action name="login" class="action.login" method="check">
+            <result name="success">index.jsp</result>
+            <result name="input">login.jsp</result>
+        </action>
+        <action name="changePw" class="action.changePw" method="changepw">
+            <result name="success">index.jsp</result>
+            <result name="input">changepw.jsp</result>
+        </action>
+        <action name="live" class="action.live" method="liveIn">
+            <result name="success">index.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <action name="leave" class="action.leave" method="leaveOut">
+            <result name="success">index.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <action name="addVIP" class="action.addVIP" method="addvip">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="Remove" class="action.deleteVIP" method="remove">
+            <result name="success">index.jsp</result>
+        </action>
+    </package>
+    <package name="json" extends="struts-default,json-default" >  
+        <action name="ShowMessage" class="action.showMessage" method="showmessage">
+            <result type="json">
+                <param name="root">message</param>
+            </result>
+        </action> 
+        <action name="ShowVIP" class="action.showVIP" method="showvip">
+            <result type="json">
+                <param name="root">vips</param>
+            </result>
+        </action> 
+        <action name="ShowRoom" class="action.showRoom" method="showroom">
+            <result type="json">
+                <param name="root">rooms</param>
+            </result>
+        </action> 
+    </package>  
+</struts>

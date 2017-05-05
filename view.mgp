@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PackageAnalysis>
+    <Package name="action" x="263" y="169">
+        <DependencyLink destination="DAO"/>
+        <DependencyLink destination="entity"/>
+    </Package>
+    <Package name="common" x="663" y="353"/>
+    <Package name="DAO" x="263" y="344">
+        <DependencyLink destination="common"/>
+        <DependencyLink destination="entity"/>
+    </Package>
+    <Package name="entity" x="683" y="176"/>
+</PackageAnalysis>

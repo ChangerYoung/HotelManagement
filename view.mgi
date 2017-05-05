@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="action.deleteVIP" x="1227" y="158">
+        <Communication destinationClassName="DAO.customerDao"/>
+    </CommunicationClass>
+    <CommunicationClass name="action.showRoom" x="780" y="126">
+        <Association destinationClassName="entity.Message"
+            endpointName="rooms" kind="Simple"/>
+        <Communication destinationClassName="DAO.customerDao"/>
+    </CommunicationClass>
+    <CommunicationClass name="action.changePw" x="1240" y="383">
+        <Communication destinationClassName="DAO.userDao"/>
+    </CommunicationClass>
+    <CommunicationClass name="action.showVIP" x="1187" y="266">
+        <Association destinationClassName="entity.vip"
+            endpointName="vips" kind="Simple"/>
+        <Association destinationClassName="entity.vip" endpointName="v" kind="Simple"/>
+        <Communication destinationClassName="DAO.customerDao"/>
+    </CommunicationClass>
+    <CommunicationClass name="action.live" x="791" y="256">
+        <Communication destinationClassName="DAO.customerDao"/>
+    </CommunicationClass>
+    <CommunicationClass name="DAO.customerDao" x="977" y="136">
+        <Association destinationClassName="entity.Message"
+            endpointName="data" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="action.showMessage" x="1193" y="36">
+        <Association destinationClassName="entity.Message"
+            endpointName="message" kind="Simple"/>
+        <Communication destinationClassName="DAO.customerDao"/>
+    </CommunicationClass>
+    <CommunicationClass name="action.addVIP" x="997" y="26">
+        <Communication destinationClassName="DAO.customerDao"/>
+    </CommunicationClass>
+    <CommunicationClass name="entity.Message" x="797" y="492"/>
+    <CommunicationClass name="entity.Customer" x="1033" y="489"/>
+    <CommunicationClass name="action.leave" x="786" y="36">
+        <Communication destinationClassName="DAO.customerDao"/>
+    </CommunicationClass>
+    <CommunicationClass name="entity.vip" x="1278" y="492"/>
+    <CommunicationClass name="action.login" x="790" y="376">
+        <Communication destinationClassName="DAO.userDao"/>
+    </CommunicationClass>
+    <CommunicationClass name="DAO.userDao" x="1018" y="380"/>
+</ClassDiagram>
